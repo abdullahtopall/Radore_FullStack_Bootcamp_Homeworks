@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace odev1_cars.concretes
 {
-    public class Mercedes : IFlying, ISwimming
+    public class Mercedes : Car, IFlying, ISwimming
     {
+        public override double Benzin => 70.0;
+
         public void fly()
         {
             Console.WriteLine("mercedes havada uçuyor");

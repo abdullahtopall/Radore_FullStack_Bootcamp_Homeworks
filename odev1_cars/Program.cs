@@ -1,4 +1,5 @@
-﻿using odev1_cars.concretes;
+﻿using odev1_cars.abstracts;
+using odev1_cars.concretes;
 
 namespace odev1_cars
 {
@@ -18,6 +19,14 @@ namespace odev1_cars
             mercedes.swim();
 
             porsche.goingFast();
+
+            List<Car> cars = new List<Car> { bmw, mercedes, porsche };
+            double toplamBenzin = 0;
+            foreach (var car in cars)
+            {
+                toplamBenzin += car.Benzin;
+            }
+            Console.WriteLine("Toplam benzin tüketimi: "+toplamBenzin+" litre");
         }
     }
 }
