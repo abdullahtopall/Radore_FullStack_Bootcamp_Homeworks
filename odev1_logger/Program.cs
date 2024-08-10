@@ -10,16 +10,16 @@ namespace odev1_logger
             DbLog dbLog = new DbLog();
             JsonLog jsonLog = new JsonLog();
             XmlLog xmlLog = new XmlLog();
+            EmailLog emailLog = new EmailLog();
 
-            ILogger[] loggers = new ILogger[] { dbLog, jsonLog,xmlLog };
+            Logger logger = new Logger(emailLog);
+            logger.LogKaydet("303");
 
-            dbLog.log("dblog test");
-            jsonLog.log("jsonlog test");
-            xmlLog.log("xmllog test");
+            ILogger[] loggers = new ILogger[] { dbLog, jsonLog,xmlLog, emailLog };
 
-            foreach (ILogger logger in loggers)
+            foreach (ILogger x in loggers)
             {
-                logger.log("test log");
+                x.log("test log");
             }
 
         }

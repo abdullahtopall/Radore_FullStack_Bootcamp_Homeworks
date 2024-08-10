@@ -8,6 +8,6 @@ namespace odev1_logger.abstracts
 {
     public interface ILogger
     {
-        public void log(string code);
+        void log(string code);
     }
 }
