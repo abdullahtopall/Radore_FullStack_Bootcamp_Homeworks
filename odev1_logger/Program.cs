@@ -13,7 +13,7 @@ namespace odev1_logger
             EmailLog emailLog = new EmailLog();
 
             Logger logger = new Logger(emailLog);
-            logger.LogKaydet("303");
+            logger.logKaydet("303");
 
             ILogger[] loggers = new ILogger[] { dbLog, jsonLog,xmlLog, emailLog };
 

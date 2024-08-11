@@ -1,11 +1,11 @@
-﻿using odev1_logger.abstracts;
+﻿using odev2_logger_windows_form.abstracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace odev1_logger.concretes
+namespace odev2_logger_windows_form.concretes
 {
     public class Logger
     {
@@ -15,11 +15,9 @@ namespace odev1_logger.concretes
             this.logger = logger;
         }
 
-        public void logKaydet(string message)
+        public string logKaydet(string message)
         {
-            logger.log(message);
+            return logger.log(message);
         }
-        
-        
     }
 }
